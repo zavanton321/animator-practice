@@ -1,4 +1,4 @@
-package com.example.animatorpractice.main
+package com.example.animatorpractice.activity_transition
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import com.example.animatorpractice.R
-import com.example.animatorpractice.detail.DetailActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.core.util.Pair as AndroidxPair
 

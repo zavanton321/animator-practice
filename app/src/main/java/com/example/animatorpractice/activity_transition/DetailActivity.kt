@@ -1,4 +1,4 @@
-package com.example.animatorpractice.detail
+package com.example.animatorpractice.activity_transition
 
 import android.os.Bundle
 import android.view.Menu
