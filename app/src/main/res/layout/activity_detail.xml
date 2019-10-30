@@ -17,36 +17,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:title="Transitions"
+            app:navigationIcon="@drawable/ic_back_arrow"
+            app:title="Details"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
+        android:id="@+id/vContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
 
         <ImageView
-            android:id="@+id/ivCat"
-            android:layout_width="64dp"
-            android:layout_marginStart="@dimen/size_8dp"
-            android:layout_marginTop="@dimen/size_8dp"
-            android:layout_height="64dp"
-            android:src="@drawable/start_cat"
+            android:id="@+id/ivDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar"
             android:transitionName="@string/targetCat"
             />
 
         <Button
-            android:id="@+id/btnOk"
+            android:id="@+id/btnFinish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="OK"
+            android:layout_gravity="bottom|end"
+            android:text="Finish"
             />
 
     </FrameLayout>
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
