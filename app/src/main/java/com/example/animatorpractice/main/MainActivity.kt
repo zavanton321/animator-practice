@@ -4,12 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import com.example.animatorpractice.R
 import com.example.animatorpractice.detail.DetailActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.core.util.Pair as AndroidxPair
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,11 +23,14 @@ class MainActivity : AppCompatActivity() {
 
         btnOk.setOnClickListener {
 
+            val imagePair = AndroidxPair.create(ivCat as View, getString(R.string.targetCat))
+            val buttonPair = AndroidxPair.create(btnOk as View, getString(R.string.targetButton))
+
             val activityOptionsCompat = ActivityOptionsCompat
                 .makeSceneTransitionAnimation(
                     this,
-                    ivCat,
-                    getString(R.string.targetCat)
+                    imagePair,
+                    buttonPair
                 )
 
             val intent = Intent(this, DetailActivity::class.java)
