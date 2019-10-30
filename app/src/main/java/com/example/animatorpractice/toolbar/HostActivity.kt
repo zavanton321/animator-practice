@@ -1,4 +1,4 @@
-package com.example.animatorpractice.detail
+package com.example.animatorpractice.toolbar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

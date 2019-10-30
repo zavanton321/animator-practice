@@ -1,4 +1,4 @@
-package com.example.animatorpractice.menu
+package com.example.animatorpractice.toolbar
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.animatorpractice.R
-import com.example.animatorpractice.detail.FinishFragment
+import com.example.animatorpractice.actionbar.FragmentTwo
 import kotlinx.android.synthetic.main.fmt_finish.*
 
-class FragmentTwo : Fragment() {
+class FinishFragment : Fragment() {
 
     companion object {
 
-        fun newInstance(): FragmentTwo = FragmentTwo()
+        fun newInstance(): FinishFragment = FinishFragment()
     }
 
     override fun onCreateView(
@@ -36,7 +36,7 @@ class FragmentTwo : Fragment() {
         }
         vToolbar.inflateMenu(R.menu.menu_finish)
         vToolbar.setOnMenuItemClickListener {
-            if (it.itemId == R.id.item_finish) {
+            if (it.itemId == R.id.item_search) {
                 Toast.makeText(requireContext(), "Finish", Toast.LENGTH_SHORT).show()
             }
             true

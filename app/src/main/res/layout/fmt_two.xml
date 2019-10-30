@@ -12,12 +12,12 @@
         >
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/vToolbar"
+            android:id="@+id/vToolbarTwo"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:navigationIcon="@drawable/ic_back_arrow"
-            app:title="Finish"
+            app:title="Two"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

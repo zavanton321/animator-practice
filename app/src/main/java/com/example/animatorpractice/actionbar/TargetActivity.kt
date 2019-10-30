@@ -1,4 +1,4 @@
-package com.example.animatorpractice.menu
+package com.example.animatorpractice.actionbar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +13,7 @@ class TargetActivity : AppCompatActivity(), FragmentOne.FragmentNavigator {
         addFragment(savedInstanceState)
     }
 
-    override fun goToFinishFragment() {
+    override fun goToFragmentTwo() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fmtContainer, FragmentTwo.newInstance())
             .addToBackStack(null)

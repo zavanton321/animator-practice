@@ -1,4 +1,4 @@
-package com.example.animatorpractice.menu
+package com.example.animatorpractice.toolbar
 
 import android.content.Context
 import android.os.Bundle
@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.animatorpractice.R
-import com.example.animatorpractice.detail.StartFragment
 import kotlinx.android.synthetic.main.fmt_start.*
 
-class FragmentOne : Fragment() {
+class StartFragment : Fragment() {
 
     interface FragmentNavigator {
 
@@ -19,7 +18,7 @@ class FragmentOne : Fragment() {
 
     companion object {
 
-        fun newInstance(): FragmentOne = FragmentOne()
+        fun newInstance(): StartFragment = StartFragment()
     }
 
     private var fragmentNavigator: FragmentNavigator? = null
@@ -27,14 +26,14 @@ class FragmentOne : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        fragmentNavigator = requireActivity() as FragmentNavigator
+        fragmentNavigator = context as FragmentNavigator
     }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = inflater.inflate(R.layout.fmt_one, container, false)
+    ): View = inflater.inflate(R.layout.fmt_start, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,6 +43,7 @@ class FragmentOne : Fragment() {
         }
 
         setupToolbar()
+
     }
 
     private fun setupToolbar() {
@@ -51,7 +51,7 @@ class FragmentOne : Fragment() {
         vToolbar.setOnMenuItemClickListener {
 
             when (it.itemId) {
-                R.id.item_finish -> fragmentNavigator?.goToFinishFragment()
+                R.id.item_search -> fragmentNavigator?.goToFinishFragment()
             }
             true
         }
