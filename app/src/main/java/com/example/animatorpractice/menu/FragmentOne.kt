@@ -1,4 +1,4 @@
-package com.example.animatorpractice.detail
+package com.example.animatorpractice.menu
 
 import android.content.Context
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.animatorpractice.R
-import com.example.animatorpractice.menu.FragmentOne
+import com.example.animatorpractice.detail.StartFragment
 import kotlinx.android.synthetic.main.fmt_start.*
 
-class StartFragment : Fragment() {
+class FragmentOne : Fragment() {
 
     interface FragmentNavigator {
 
@@ -34,7 +34,7 @@ class StartFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = inflater.inflate(R.layout.fmt_start, container, false)
+    ): View = inflater.inflate(R.layout.fmt_one, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,7 +44,6 @@ class StartFragment : Fragment() {
         }
 
         setupToolbar()
-
     }
 
     private fun setupToolbar() {

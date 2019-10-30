@@ -15,6 +15,8 @@
         tools:ignore="GoogleAppIndexingWarning"
         >
         <activity android:name=".detail.HostActivity">
+        </activity>
+        <activity android:name=".menu.TargetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
