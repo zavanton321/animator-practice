@@ -7,6 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/custom_transition</item>
+        <item name="android:windowExitTransition">@transition/custom_transition</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/custom_transition</item>
+        <item name="android:windowSharedElementExitTransition">@transition/custom_transition</item>
     </style>
 
 </resources>
