@@ -13,8 +13,10 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/vToolbar"
+            app:title="Start"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

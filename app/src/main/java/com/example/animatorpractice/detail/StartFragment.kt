@@ -2,8 +2,9 @@ package com.example.animatorpractice.detail
 
 import android.content.Context
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.animatorpractice.R
 import kotlinx.android.synthetic.main.fmt_start.*
@@ -32,9 +33,7 @@ class StartFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fmt_start, container, false)
-    }
+    ): View = inflater.inflate(R.layout.fmt_start, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,18 +41,20 @@ class StartFragment : Fragment() {
         tvStart.setOnClickListener {
             fragmentNavigator?.goToFinishFragment()
         }
+
+        setupToolbar()
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu_start, menu)
-    }
+    private fun setupToolbar() {
+        vToolbar.inflateMenu(R.menu.menu_start)
+        vToolbar.setOnMenuItemClickListener {
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.item_finish) {
-            Toast.makeText(requireActivity(), "Finish", Toast.LENGTH_SHORT).show()
+            when (it.itemId) {
+                R.id.item_finish -> fragmentNavigator?.goToFinishFragment()
+            }
+            true
         }
-        return super.onOptionsItemSelected(item)
     }
 
     override fun onDetach() {
