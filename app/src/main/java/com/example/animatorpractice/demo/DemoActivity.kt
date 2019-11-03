@@ -5,7 +5,10 @@ import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.AutoTransition
+import androidx.transition.Explode
+import androidx.transition.Fade
 import androidx.transition.Scene
+import androidx.transition.Slide
 import androidx.transition.Transition
 import androidx.transition.TransitionManager
 import com.example.animatorpractice.R
