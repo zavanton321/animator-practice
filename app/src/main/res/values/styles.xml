@@ -13,4 +13,13 @@
         <item name="android:windowSharedElementExitTransition">@transition/custom_transition</item>
     </style>
 
+    <style name="AppTheme.CustomStyle">
+        <item name="android:windowAnimationStyle">@style/TransitionFadeStyle</item>
+    </style>
+
+    <style name="TransitionFadeStyle">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
 </resources>

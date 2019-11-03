@@ -14,13 +14,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         >
-        <activity android:name=".custom.CustomActivity">
+        <activity
+            android:name=".window_animation.WindowAnimationOneActivity"
+            android:theme="@style/AppTheme.CustomStyle"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".window_animation.WindowAnimationTwoActivity"
+            android:theme="@style/AppTheme.CustomStyle"
+            />
+        <activity android:name=".custom.CustomActivity" />
         <activity android:name=".demo.DemoActivity" />
         <activity android:name=".transition.ItemActivity" />
         <activity android:name=".transition.ListActivity" />
