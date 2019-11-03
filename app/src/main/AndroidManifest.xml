@@ -14,13 +14,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         >
-        <activity android:name=".fragment.FragmentHostActivity">
+        <activity android:name=".fade.FadeActivityA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".fade.FadeActivityB" />
+        <activity android:name=".fragment.FragmentHostActivity" />
         <activity
             android:name=".window_animation.WindowAnimationOneActivity"
             android:theme="@style/AppTheme.CustomStyle"

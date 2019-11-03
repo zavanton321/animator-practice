@@ -12,7 +12,10 @@ class FragmentHostActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fragment_host)
 
         addFragment(savedInstanceState)
+        changeFragment()
+    }
 
+    private fun changeFragment() {
         fragmentHost.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentHost, FragmentB.newInstance())
