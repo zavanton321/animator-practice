@@ -14,16 +14,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         >
-        <activity android:name=".toolbar.HostActivity">
+        <activity android:name=".transition.ItemActivity"></activity>
+        <activity android:name=".transition.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".actionbar.TargetActivity">
-
-        </activity>
+        <activity android:name=".toolbar.HostActivity" />
+        <activity android:name=".actionbar.TargetActivity" />
         <activity android:name=".activity_transition.MainActivity" />
         <activity android:name=".activity_transition.DetailActivity" />
     </application>
