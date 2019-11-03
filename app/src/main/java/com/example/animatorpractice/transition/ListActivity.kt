@@ -19,7 +19,7 @@ class ListActivity : AppCompatActivity() {
 
     private fun setupExitTransition() {
         val slide = TransitionInflater.from(this)
-            .inflateTransition(R.transition.transition_slide)
+            .inflateTransition(R.transition.slide_transition)
         window.exitTransition = slide
     }
 
